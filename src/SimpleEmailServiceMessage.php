@@ -131,9 +131,31 @@ final class SimpleEmailServiceMessage {
         $this->bcc = array();
 
         $this->is_clean = false;
+        
+        return $this;
+    }
+    
+	// generate automatically the text version of an HTML email content (Quick n'dirty)
+    public function setMessageFromHTMLString($html) {
+        
+        $text=$html;
+        $LayoutTags = array('span', 'p' ,'div',  'code',  'pre', ); 
+                                     
+       //artificially adds '\n' for tags that are used for layout before been stripped by striptags
+        foreach ($LayoutTags as $tag) {
+            $text=str_replace("</$tag>","</$tag>\n", $text); 
+        }
+        $text=str_replace("<br>","<br>\n", $text); 
+        $text = trim(strip_tags(preg_replace('/<(head|title|style|script)[^>]*>.*?<\/\\1>/s','',$text)));         
+                
+        $this->messagetext = $text;
+        $this->messagehtml = $html;
 
         return $this;
     }
+	
+    
+    
 
     /**
      * @return SimpleEmailServiceMessage $this
