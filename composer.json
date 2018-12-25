@@ -1,17 +1,21 @@
 {
-    "name": "daniel-zahariev/php-aws-ses",
+    "name": "lubuzzo/php-aws-ses",
     "description": "Send emails via Amazon Simple Email Service (SES) with REST-like interface",
     "keywords": ["amazon", "email","aws","ses", "api", "rest"],
-    "homepage": "https://github.com/daniel-zahariev/php-aws-ses",
+    "homepage": "https://github.com/lubuzzo/php-aws-ses",
     "type": "library",
     "license": "MIT",
     "minimum-stability": "stable",
     "prefer-stable": true,
     "authors": [
         {
-            "name": "Daniel Zahariev",
-            "role": "developer"
-        }
+		"name": "Daniel Zahariev",
+		"role": "developer"
+        },
+	{
+		"name": "Lucas Buzzo",
+		"role": "developer"
+	}
     ],
     "autoload": {
         "classmap": ["src/"]
