@@ -1,8 +1,5 @@
 **Amazon Simple Email Service provides a simple way to send e-mails without having to maintain your own mail server. Those PHP classes use the REST-based interface to that service.**
 
-[![Build Status](https://travis-ci.org/daniel-zahariev/php-aws-ses.svg?branch=master)](https://travis-ci.org/daniel-zahariev/php-aws-ses)
-[![CircleCI](https://circleci.com/gh/daniel-zahariev/php-aws-ses/tree/master.svg?style=svg)](https://circleci.com/gh/daniel-zahariev/php-aws-ses/tree/master)
-
 ---
 
 > This repository is a fork from version 0.8.2 of the [original classes](http://www.orderingdisorder.com/aws/ses/) developed by **Dan Myers**
@@ -25,7 +22,7 @@
 
 Install the latest version with
 
-    composer require daniel-zahariev/php-aws-ses
+    composer require lubuzzo/php-aws-ses
 
 ### Basic Usage
 
@@ -215,6 +212,10 @@ $ses->sendEmail($m, $use_raw_request, $trigger_error);
 ```
 
 ### Changelog
+
+v.0.9.2
+
+*   Added support for HTML messages
 
 v.0.9.1
 
